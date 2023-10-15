@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 30px;
+      }
+      .cols {
+        border: 1px solid navy;
+        text-align: center;
+      }
+      .grid_col_3 {
+        grid-column: span 3;
+      }
+      .grid_col_6 {
+        grid-column: span 6;
+      }
+      .grid_col_3 {
+        grid-column: span 3;
+      }
+      .grid_col_12 {
+        grid-column: span 12;
+      }
+      @media only screen and (max-width: 576px) {
+        .grid_col_3 {
+          grid-column: span 12;
+        }
+        .grid_col_6 {
+          grid-column: span 12;
+        }
+        .grid_col_3 {
+          grid-column: span 12;
+        }
+        .grid_col_12 {
+          grid-column: span 12;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="grid">
+        <div class="cols grid_col_3">
+          <h1>cols-3</h1>
+          <img src="covered-pot.jpg" alt="">
+        </div>
+        <div class="cols grid_col_6">
+          <h1>cols-5</h1>
+          <img src="covered-pot.jpg" alt="">
+        </div>
+        <div class="cols grid_col_3">
+          <h1>cols-5</h1>
+          <img src="covered-pot.jpg" alt="">
+        </div>
+        <div class="cols grid_col_12">
+          <h1>cols-5</h1>
+          <img src="covered-pot.jpg" alt="">
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
